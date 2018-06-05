@@ -45,6 +45,10 @@
   width: 20rem;
   background-color: gray;
   border: 1px solid gray;
+  background-image: url('https://www.axiapayments.com/wp-content/uploads/2014/09/placeholder-square.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .panel-2,
@@ -67,4 +71,56 @@
 .panel-text {
   display: inline-block;
   width: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .accordion-button.active {
+    background-color: #D1D2D3;
+    border-bottom: initial;
+  }
+
+  .accordion-button.active-mobile {
+    background-color: white;
+    background-image: url('../images/minus-symbol.svg');
+  }
+
+  .accordion-tabs {
+    position: static;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: flex-start;
+  }
+
+  .accordion-panel {
+    position: static;
+    flex-direction: column;
+    height: fit-content;
+    display: none;
+  }
+
+  .panel-text,
+  .panel-image {
+    width: 100%;
+  }
+
+  .panel-text {
+    padding: 1rem;
+  }
+
+  .accordion-button {
+    text-align: left;
+    height: 5rem;
+    width: 100%;
+    border-right: 1px solid #d1d2d3;
+    background-size: 2rem 2rem;
+    background-position: 95% center;
+    background-image: url('../images/plus-symbol.svg');
+    background-repeat: no-repeat;
+  }
+
+  .panel-2,
+  .panel-3,
+  .panel-4 {
+    visibility: visible;
+  }
 }
